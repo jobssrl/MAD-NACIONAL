@@ -18,7 +18,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            /* Fondo azul muy oscuro como en la imagen */
             background-color: #061933; 
             color: white;
             padding: 15px 30px;
@@ -32,11 +31,14 @@
             align-items: center;
         }
 
-        /* --- Estilo para el logo de la empresa (logo.png) --- */
+        .header-right {
+            display: flex;
+            gap: 10px;
+        }
+
         .company-logo {
-            height: 40px; /* Ajusta el tamaño del logo */
-            margin-right: 25px; /* Espacio entre el logo y el título */
-            /* Si tu logo tiene esquinas cuadradas y quieres que sean curvas: border-radius: 5px; */
+            height: 40px; 
+            margin-right: 25px;
         }
         
         .header-left h1 {
@@ -46,43 +48,31 @@
             align-items: center;
         }
 
-        /* --- Estilo para el icono de la gráfica --- */
         .chart-icon {
             margin-right: 10px;
             font-size: 28px;
         }
         
-        /* El emoji de la gráfica que se parece al de la imagen */
         .chart-icon::before {
             content: "📊"; 
         }
 
-
-        /* --- Estilos para el botón de descarga --- */
-        .download-button {
-            text-decoration: none;
-            /* Fondo del botón: azul oscuro ligeramente más claro que el header, como en la imagen */
-            background-color: #0d284a; 
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 15px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        /* Estilo exacto según imagen de referencia */
+        .nav-button {
             display: flex;
             align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background 0.3s;
         }
 
-        .download-button:hover {
-            background-color: #14355a;
-            transform: translateY(-1px);
-        }
-        
-        .download-button::before {
-            content: "⬇️";
-            margin-right: 8px;
-            font-size: 18px;
+        .nav-button:hover {
+            background-color: rgba(255, 255, 255, 0.15);
         }
 
         .iframe-container {
@@ -117,16 +107,21 @@
 
     <header>
         <div class="header-left">
-            <img src="logo.png" alt="Logo de la Empresa" class="company-logo">
-            
-            <h1>
-                <span class="chart-icon"></span> MAD NACIONAL
-            </h1>
+            <img src="logo.png" alt="Logo" class="company-logo">
+            <h1><span class="chart-icon"></span> MAD NACIONAL</h1>
         </div>
         
-        <a href="https://1drv.ms/x/c/a3d1fea0c2538ed3/IQAY-TKbQ5AJSpTMT4UT-1TVAUF-oEXCAAjSN3k84Ugv_bM?e=TpbgBp" target="_blank" class="download-button">
-            Descargar Excel
-        </a>
+        <div class="header-right">
+            <!-- Botón Clima -->
+            <a href="clima.html" class="nav-button">☁️ Clima 2026</a>
+
+            <!-- Botón Excel -->
+            <a href="https://1drv.ms/x/c/a3d1fea0c2538ed3/IQAY-TKbQ5AJSpTMT4UT-1TVAUF-oEXCAAjSN3k84Ugv_bM?e=TpbgBp" 
+               target="_blank" 
+               class="nav-button">
+                ↓ Descargar Excel
+            </a>
+        </div>
     </header>
 
     <div class="iframe-container">
